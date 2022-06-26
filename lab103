@@ -1,0 +1,12 @@
+for A in *
+do if test -d $A
+   then echo $A: is a directory
+   else echo -n $A
+         if test -w $A
+	 then echo writable
+	 elif est -r $A
+	 then echo readble
+	 else echo neither readble nor writable
+	 fi
+fi
+done
